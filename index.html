@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navbar with Logo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        .navigation-bar {
+            display: flex;                   
+            justify-content: space-between;   
+            background-color: #018145;
+            padding: 10px 20px;
+        }
+
+        .logo img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav ul li {
+            margin: 0 10px;
+        }
+
+        .nav ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 16px;
+        }
+
+        .nav ul li a:hover {
+            background-color: #111;
+        }
+       
+        .welcome{
+            font-size: 80px;
+            font-style: italic;
+        }
+        .headersection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: nowrap; 
+  padding: 50px;
+  
+  
+}
+.headersection .img img {
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+}
+.headersection img {
+  width: 50%;
+  height: 50%;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 120px;
+}
+.heading {
+    text-align: left;
+}
+.welcome {
+    font-size: 60px;
+    font-style: italic;
+    margin: 0;
+    color: #018145;
+}
+
+.add {
+    font-size: 24px;
+    margin: 10px 0 0 0;
+    color: #333;
+}
+.main{
+    margin-top: 36px;
+    
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  border-radius: none;
+  color: white;
+  cursor: pointer;
+  background-color: #018145;
+
+    
+      position: relative;
+      overflow: hidden;
+      box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
+  }
+
+  .main span {
+      position: absolute;
+      border-radius: 50%;
+      
+      background-color: rgba(0, 0, 0, 0.3);
+
+      width: 100px;
+      height: 100px;
+      margin-top: -50px;
+      
+      margin-left: -50px;
+
+      animation: ripple 1s;
+      opacity: 0;
+  }
+
+  /* Add animation */
+  @keyframes ripple {
+      from {
+          opacity: 1;
+          transform: scale(0);
+      }
+
+      to {
+          opacity: 0;
+          transform: scale(100);
+      }
+  
+}
+footer {
+      background: #222;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .social-icons a {
+      color: #fff;
+      display: inline-block;
+      transition: transform 0.4s ease;
+      cursor: pointer;
+    }
+   
+    .social-icons a:hover {
+      animation: bounce 0.6s;
+      color: #ff5722;
+    }
+    .social-icons a:active {
+      animation: rotate 0.5s;
+    }
+    .blog {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .blog-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .blog-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .blog-card:hover img {
+      transform: scale(1.1);
+    }
+    .blog-content {
+      padding: 1rem 1.2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-title {
+      font-family: 'Lora', serif;
+      font-size: 1.3rem;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      color: #ff5722;
+    }
+    .blog-excerpt {
+      flex-grow: 1;
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+    .blog-readmore {
+      align-self: flex-start;
+      font-weight: 600;
+      color: #ff5722;
+      transition: color 0.3s ease;
+    }
+    .blog-readmore:hover {
+      color: #e64a19;
+    }
+
+    /* Categories Section */
+    .categories {
+      background: #fff3e0;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .categories h2 {
+      font-family: 'Lora', serif;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #bf360c;
+    }
+    .category-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .category-btn {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #ffccbc;
+      color: #bf360c;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 5px 15px rgba(191,54,12,0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      user-select: none;
+      font-size: 1rem;
+    }
+    .category-btn:hover {
+      background: #bf360c;
+      color: #fff3e0;
+      transform: scale(1.2);
+      box-shadow: 0 8px 20px rgba(191,54,12,0.6);
+    }
+
+    /* Subscribe Section */
+    .subscribe {
+      max-width: 600px;
+      margin: 4rem auto;
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .subscribe h2 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #ff5722;
+    }
+    .subscribe p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+    .subscribe form {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .subscribe input[type="text"],
+    .subscribe input[type="email"] {
+      flex: 1 1 200px;
+      padding: 0.8rem 1rem;
+      font-size: 1rem;
+      border: 2px solid #ffccbc;
+      border-radius: 40px;
+      transition: border-color 0.3s ease;
+      outline: none;
+      font-family: 'Poppins', sans-serif;
+    }
+    .subscribe input[type="text"]:focus,
+    .subscribe input[type="email"]:focus {
+      border-color: #ff5722;
+    }
+    .subscribe button {
+      background: #ff5722;
+      border: none;
+      padding: 0 2rem;
+      border-radius: 40px;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255,87,34,0.4);
+      transition: box-shadow 0.4s ease;
+    }
+    .subscribe button:hover {
+      box-shadow:
+        0 0 10px #ff5722,
+        0 0 20px #ff5722,
+        0 0 30px #ff5722,
+        0 0 40px #ff5722;
+    }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="navigation-bar">
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWtgZknsZfLQNw0lQxcRc5X_BK8G9752to-w&s" alt="Logo" >
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="headersection">
+        <div class="img">
+            <img src="https://images.pexels.com/photos/2265876/pexels-photo-2265876.jpeg?cs=srgb&dl=pexels-vince-2265876.jpg&fm=jpg&_gl=1*fn5r0o*_ga*NTY3NTUxNjMxLjE3NTczOTM0Mzk.*_ga_8JE65Q40S6*czE3NTczOTM0MzgkbzEkZzAkdDE3NTczOTM0MzgkajYwJGwwJGgw" class="image">
+        </div>
+        <div class="heading">
+            <p class="welcome">Welcome</p><p class="add">
+                to the foreign world
+            </p>
+            <button class="main">new world</button>
+        </div>
+    </div>
+    <section class="blog" id="blog" aria-label="Latest Blog Posts">
+        <article class="blog-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Post 1 Image" />
+          <div class="blog-content">
+            <h3 class="blog-title">Discover the Beauty of Nature</h3>
+            <p class="blog-excerpt">Explore breathtaking landscapes and get inspired by the great outdoors. Tips on travel, photography, and more.</p>
+            <a href="#" class="blog-readmore">Read More →</a>
+          </div>
+        </article>
+    
+        <article class="blog-card">
+          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" alt="Post 2 Image" />
+          <div class="blog-content">
+            <h3 class="blog-title">Healthy Living Tips</h3>
+            <p class="blog-excerpt">Simple and effective ways to improve your lifestyle, boost your energy, and maintain wellness daily.</p>
+            <a href="#" class="blog-readmore">Read More →</a>
+          </div>
+        </article>
+    
+        <article class="blog-card">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="Post 3 Image" />
+          <div class="blog-content">
+            <h3 class="blog-title">Tech Trends 2025</h3>
+            <p class="blog-excerpt">Stay ahead with the latest trends in technology, gadgets, and innovations that will shape our future.</p>
+            <a href="#" class="blog-readmore">Read More →</a>
+          </div>
+        </article>
+      </section>
+    
+      <!-- Categories Section -->
+      <section class="categories" id="categories">
+        <h2>Explore Categories</h2>
+        <div class="category-buttons" role="list">
+          <div class="category-btn" role="listitem" tabindex="0">Travel</div>
+          <div class="category-btn" role="listitem" tabindex="0">Health</div>
+          <div class="category-btn" role="listitem" tabindex="0">Technology</div>
+          <div class="category-btn" role="listitem" tabindex="0">Food</div>
+          <div class="category-btn" role="listitem" tabindex="0">Lifestyle</div>
+        </div>
+      </section>
+    
+      <!-- Subscribe Section -->
+      <section class="subscribe" id="subscribe">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest posts and updates directly in your inbox.</p>
+        <form action="#" method="POST" aria-label="Subscribe form">
+          <input type="text" name="name" placeholder="Name" required aria-required="true" />
+          <input type="email" name="email" placeholder="Email" required aria-required="true" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+    
+    <footer id="contact">
+        <div class="social-icons" aria-label="Social media links">
+          <a href="#" aria-label="Facebook" tabindex="0"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter" tabindex="0"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram" tabindex="0"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn" tabindex="0"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2025 MyBlog. All rights reserved.</p>
+      </footer>
+   
+       
+        
+
+
+</body>
+</html>
